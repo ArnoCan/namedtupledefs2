@@ -1,10 +1,10 @@
-namedtupledefs
-==============
+namedtupledefs2
+===============
 
-The package 'namedtupledefs' provides a patched version of the *collections.namedtuple* 
-with field defaults for *namedtuple* and type-accurate *_merge*. Adds *Jython* support.
-This is a drop-in compatible patch with minimal changes only - basically one line in
-the class template only. Just use:
+The package 'namedtupledefs2' provides a patched version of the *collections.namedtuple* 
+with field defaults for *namedtuple* and type-accurate *_merge*. The package supports
+*Python2.7* syntax. Adds *Jython* support. This is a drop-in compatible patch with
+minimal changes only - basically one line in the class template only. Just use:
 
 	import namedtupledefs
 	
@@ -77,7 +77,7 @@ Project Data
 
 * VERSION: 00.01
 
-* RELEASE: 00.01.013
+* RELEASE: 00.01.014
 
 * STATUS: alpha
 
