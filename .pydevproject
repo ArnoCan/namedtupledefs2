@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse-pydev version="1.0"?><pydev_project>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">venv2714</pydev_property>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python interpreter</pydev_property>
+<pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
+<path>/${PROJECT_DIR_NAME}</path>
+</pydev_pathproperty>
+
+<pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
+<path>/home/acue/data/rd/p-open-deploy/pythonids/components/pypythonids</path>
+<path>/local/hd1/home1/data/acue/rd/p-open-deploy/platformids/components/pyplatformids</path>
+<path>/local/hd1/home1/data/acue/rd/p-open-deploy/sourceinfo/components/pysourceinfo</path>
+<path>/local/hd1/home1/data/acue/rd/p-open-deploy/multiconf/components/pymulticonf</path>
+<path>/local/hd1/home1/data/acue/rd/p-open-deploy/jsondata/components/pyjsondata</path>
+<path>/local/hd1/home1/data/acue/rd/p-open-deploy/namedtuplex/components/namedtuplex</path>
+<path>/local/hd1/home1/data/acue/rd/p-open-deploy/setuplib/components/pysetuplib</path>
+<path>/local/hd1/home1/data/acue/rd/p-open-deploy/rdbg/components/pyrdbg</path>
+<path>/local/hd1/home1/data/acue/rd/p-open-deploy/setupjavax/components/setupjavax</path>
+<path>/local/hd1/home1/data/acue/rd/p-open-deploy/setupdocx/components/setupdocx</path>
+<path>/local/hd1/home1/data/acue/rd/p-open-deploy/setuptestx/components/setuptestx</path>
+</pydev_pathproperty>
+</pydev_project>

@@ -1,0 +1,13 @@
+External References
+===================
+
+.. [CCBY] Creative Commons license - CC BY; `CCBY@Wikipedia.org <https://en.wikipedia.org/wiki/Creative_Commons_license>`_ ; `CCBY@CreativeCommons.org <https://creativecommons.org/licenses/by/4.0/>`_ ;
+.. [PEP3119]  -- Abstract base classes according to PEP 3119.; Guido van Rossum <guido at python.org>, Talin <talin at acm.org>; 18-Apr-2007; `Python.org <https://www.python.org/dev/peps/pep-3119/>`_
+.. [PYFUNC] The Python Language Reference - Function definitions; `Python2 os <https://docs.python.org/2.7/reference/compound_stmts.html#function-definitions>`_; `Python3 os <https://docs.python.org/3.5/reference/compound_stmts.html#function-definitions>`_
+.. [machineids] machineids - Unified Machine Identifier; Arno-Can Uestuensoez `@Ingenieurbuero Arno-Can Uestuensoez <https://arnocan.wordpress.com>`_; 2017; `PyPI <https://pypi.python.org/pypi/machineids/>`_; `GitHub <https://github.com/ArnoCan/machineids/>`_; `docs@sourceforge.io <https://machineids.sourceforge.io/>`_
+.. [namedtuple] lib/collections; `Python2 - namedtuple Factory Function for Tuples with Named Fields <https://docs.python.org/2.7/library/collections.html#collections.namedtuple>`_; `Python3 namedtuple Factory Function for Tuples with Named Fields <https://docs.python.org/3.5/library/collections.html#collections.namedtuple>`_
+.. [platformids] platformids - Unified Platform Identifier; Arno-Can Uestuensoez `@Ingenieurbuero Arno-Can Uestuensoez <https://arnocan.wordpress.com>`_; 2017; `PyPI <https://pypi.python.org/pypi/platformids/>`_; `GitHub <https://github.com/ArnoCan/pyplatformids/>`_; `docs@sourceforge.io <https://pyplatformids.sourceforge.io/>`_
+.. [pythonids] pythonids - Python Interpreter and Compiler IDs; Arno-Can Uestuensoez `@Ingenieurbuero Arno-Can Uestuensoez <https://arnocan.wordpress.com>`_; 2008-2018; `PyPI <https://pypi.python.org/pypi/pythonids/>`_; `GitHub <https://github.com/ArnoCan/pythonids/>`_; `docs @sourceforge.io <https://pypythonids.sourceforge.io/>`_
+.. [type] lib/type; `Python2 type <https://docs.python.org/2.7/library/functions.html#type>`_; `Python3 type <https://docs.python.org/3.5/library/functions.html#type>`_
+.. [xkcd] Profile Info; Randall Munroe; `xkcd.com <http://xkcd.com>`_ ; `Profile Info <http://xkcd.com/1303/>`_
+.. [WINWSL] Windows Subsystem for Linux Documentation; `WSL@Microsoft.com <https://docs.microsoft.com/en-us/windows/wsl/about>`_ ; `WSL@Wikipedia.org <https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux>`_; `WSL@github.com <https://github.com/microsoft/WSL>`_
