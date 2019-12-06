@@ -1,10 +1,11 @@
-namedtupledefs2
-===============
+namedtupledefs2 - Python2.7
+===========================
 
-The package 'namedtupledefs2' provides a patched version of the *collections.namedtuple* 
-with field defaults for *namedtuple* and type-accurate *_merge*. The package supports
-*Python2.7* syntax. Adds *Jython* support. This is a drop-in compatible patch with
-minimal changes only - basically one line in the class template only. Just use:
+The package *namedtupledefs2* provides a patched version of the factory class
+*collections.namedtuple* with field defaults for *namedtuple*. The package
+*namedtupledefs2* supports *Python2.7* syntax and adds *Jython* support. This
+is a drop-in compatible patch with minimal changes only - basically one line
+in the class template only.
 
 	import namedtupledefs
 	
@@ -37,47 +38,49 @@ of the printout:
 	>>> point0defs
 	Pointdefs(x=11, y=22, z=33)
 
-Added the method *_merge* to the created class with accurate handling of
-*_fields* and *_fielddefaults*:
+The package 'namedtupledefs2' additionally provides the method *_merge* for the
+created class with the accurate handling of *_fields* and *_fielddefaults*:
 
 	msg_header._merge('NewClassName', msg_body, msg_data)
 
 See doc-string for more examples.
 For the standard library *collections.namedtuple* see Python documentation.
 
+For the *Python3* syntax refer to *namedtupledefs3* or *namedtupledefs*.
+
 **Online documentation**:
 
-* https://namedtupledefs.sourceforge.io/
+* https://namedtupledefs2.sourceforge.io/
 
 
 **Runtime-Repository**:
 
-* PyPI: https://pypi.org/project/namedtupledefs/
+* PyPI: https://pypi.org/project/namedtupledefs2/
 
-  Install: *pip install namedtupledefs*, see also section 'Install' of the online documentation.
+  Install: *pip install namedtupledefs2*, see also section 'Install' of the online documentation.
 
 
 **Downloads**:
 
-* sourceforge.net: https://sourceforge.net/projects/namedtupledefs/files/
+* sourceforge.net: https://sourceforge.net/projects/namedtupledefs2/files/
 
-* bitbucket.org: https://bitbucket.org/acue/namedtupledefs
+* bitbucket.org: https://bitbucket.org/acue/namedtupledefs2
 
-* github.com: https://github.com/ArnoCan/namedtupledefs/
+* github.com: https://github.com/ArnoCan/namedtupledefs2/
 
-* pypi.org: https://pypi.org/project/namedtupledefs/
+* pypi.org: https://pypi.org/project/namedtupledefs2/
 
 
 Project Data
 ------------
 
-* PROJECT: 'namedtupledefs'
+* PROJECT: 'namedtupledefs2'
 
-* MISSION: The extension of the standard *collections.namedtuple* by default values.
+* MISSION: The extension of the standard *collections.namedtuple* by default values for *Python2.7*.
 
 * VERSION: 00.01
 
-* RELEASE: 00.01.015
+* RELEASE: 00.01.020
 
 * STATUS: alpha
 
@@ -90,13 +93,10 @@ Project Data
 Patches and this Documentation:
 
 * COPYRIGHT=Copyright (c) 2019 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez. All rights reserved.
-	
-* LICENSE=Artistic-License-2.0 + Forced-Fairplay-Constraints
-	      
-  With exception for the public integration into the standard library *collections* 
-  by the PSF. Than for the integrated public code-patches: 
 
-    PSF LICENSE AGREEMENT FOR PYTHON.  
+* PSF: In case of integration into standard libraries PSF LICENSE AGREEMENT FOR PYTHON.  
+
+* This library: LICENSE=Artistic-License-2.0 + Forced-Fairplay-Constraints
 
 Original code copied from Standard Python Library see "namedtupledefs.namedtuple_original":
 
@@ -112,10 +112,10 @@ For a comprehensive list refer to the documentation.
 **Python Syntax Support**
 
 * Python2
-* For the Python3 refer to the package namedtupledefs3.
   
-  This package requires the *exec* statement/function, due to it's size it is
+  This package requires the *exec* statement/function, it is
   separated into two variants instead of using shared code.  
+  For the Python3 refer to the package namedtupledefs3.
 
 **Python Implementation Support**
 
