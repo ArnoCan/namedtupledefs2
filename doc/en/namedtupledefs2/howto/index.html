@@ -1,0 +1,199 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Howto &#8212; setupdocx  documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../faq/index.html" />
+    <link rel="prev" title="7. External References" href="../references.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../faq/index.html" title="&lt;no title&gt;"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../references.html" title="7. External References"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">setupdocx  documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="howto">
+<h1>Howto<a class="headerlink" href="#howto" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="collections-namedtuple">
+<h2>collections.namedtuple<a class="headerlink" href="#collections-namedtuple" title="Permalink to this headline">¶</a></h2>
+<p>Returns a new subclass of tuple with named fields see docstring from original <a class="reference internal" href="../references.html#namedtuple" id="id1">[namedtuple]</a>.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span><span class="o">.</span><span class="vm">__doc__</span>                   <span class="c1"># docstring for the new class</span>
+<span class="go">&#39;Point(x, y)&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>             <span class="c1"># instantiate with positional args or keywords</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>                     <span class="c1"># indexable like a plain tuple</span>
+<span class="go">33</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">p</span>                        <span class="c1"># unpack like a regular tuple</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+<span class="go">(11, 22)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">y</span>                       <span class="c1"># fields also accessible by name</span>
+<span class="go">33</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">_asdict</span><span class="p">()</span>                 <span class="c1"># convert to a dictionary</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span>
+<span class="go">11</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">)</span>                      <span class="c1"># convert from a dictionary</span>
+<span class="go">Point(x=11, y=22)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>               <span class="c1"># _replace() is like str.replace() but targets named fields</span>
+<span class="go">Point(x=100, y=22)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="namedtupledefs-namedtuple">
+<h2>namedtupledefs.namedtuple<a class="headerlink" href="#namedtupledefs-namedtuple" title="Permalink to this headline">¶</a></h2>
+<p>Provides drop-in-replacement without the use of the optional default values.
+See docstring.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span><span class="o">.</span><span class="vm">__doc__</span>                   <span class="c1"># docstring for the new class with defaults</span>
+<span class="go">&#39;Point(x, y, z)\n    with optional default values fielddefaults=()&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">33</span><span class="p">)</span>               <span class="c1"># instantiate with partial positional args or keywords</span>
+<span class="go">Point(x=11, y=22, z=33)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="defaults-for-fields">
+<h2>Defaults for Fields<a class="headerlink" href="#defaults-for-fields" title="Permalink to this headline">¶</a></h2>
+<p>Provides optional default values with similar behaviour as function parameters.
+See docstring.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">],</span> <span class="n">fielddefaults</span><span class="o">=</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mi">33</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span><span class="o">.</span><span class="vm">__doc__</span>                   <span class="c1"># docstring for the new class with defaults</span>
+<span class="go">&#39;Point(x, y, z)\n    with optional default values fielddefaults=(22, 33)&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>                       <span class="c1"># instantiate with partial positional args or keywords</span>
+<span class="go">Point(x=11, y=22, z=33)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>                 <span class="c1"># instantiate with partial positional args or keywords</span>
+<span class="go">Point(x=11, y=22, z=33)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>             <span class="c1"># instantiate with positional args or keywords</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>              <span class="c1"># indexable like a plain tuple</span>
+<span class="go">66</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">p</span>                     <span class="c1"># unpack like a regular tuple</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span>
+<span class="go">(11, 22, 33)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">z</span>                 <span class="c1"># fields also accessible by name</span>
+<span class="go">66</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">_asdict</span><span class="p">()</span>                 <span class="c1"># convert to a dictionary</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span>
+<span class="go">33</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Point</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">)</span>                      <span class="c1"># convert from a dictionary</span>
+<span class="go">Point(x=11, y=22, z=33)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>               <span class="c1"># _replace() is like str.replace() but targets named fields</span>
+<span class="go">Point(x=100, y=22, z=33)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>               <span class="c1"># _replace() works for fields with default values as well</span>
+<span class="go">Point(x=11, y=22, z=100)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Howto</a><ul>
+<li><a class="reference internal" href="#collections-namedtuple">collections.namedtuple</a></li>
+<li><a class="reference internal" href="#namedtupledefs-namedtuple">namedtupledefs.namedtuple</a></li>
+<li><a class="reference internal" href="#defaults-for-fields">Defaults for Fields</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../references.html"
+                        title="previous chapter">7. External References</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../faq/index.html"
+                        title="next chapter">&lt;no title&gt;</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/howto/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../faq/index.html" title="&lt;no title&gt;"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../references.html" title="7. External References"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">setupdocx  documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Copyright (C) 2010-2019 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>
